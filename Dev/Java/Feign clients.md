@@ -5,7 +5,7 @@
 @FeignClient(name = "service", url = "\${path}", configuration = [FeignClientConfig::class])
 interface FeignClient {}
 
-@Configuration
+// If you set a @Configuration annotion it will applied to all feign clients!
 class FeignClientConfig {
     @Bean
     fun feignLoggerLevel(): Logger.Level? {
