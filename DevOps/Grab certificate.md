@@ -1,3 +1,6 @@
+# Grab certificate from a server
+
+```sh
 #!/bin/sh
 
 HOST=$1
@@ -12,3 +15,4 @@ keytool -import -noprompt -trustcacerts \
     -keystore ${KEYSTOREFILE} -storepass ${KEYSTOREPASS}
 
 keytool -list -v -keystore ${KEYSTOREFILE} -storepass ${KEYSTOREPASS} -alias ${HOST}
+```
